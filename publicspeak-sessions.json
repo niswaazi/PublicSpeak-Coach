@@ -1,0 +1,18 @@
+{
+  "schema": "publicspeak.sessions/v1",
+  "exportedAt": "2026-10-08T03:15:06.047Z",
+  "sessions": [
+    {
+      "topic": "Uji",
+      "duration": 1,
+      "score": null,
+      "metrics": {
+        "gaze": null,
+        "posture": null,
+        "gesture": null,
+        "expression": null
+      },
+      "createdAt": "2026-10-08T03:14:20.901Z"
+    }
+  ]
+}

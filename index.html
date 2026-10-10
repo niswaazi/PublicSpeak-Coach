@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111a31" />
+    <meta
+      name="description"
+      content="PublicSpeak Coach membantu siswa berlatih presentasi dengan nyaman dan percaya diri."
+    />
+    <title>PublicSpeak Coach — Latihan jadi percaya diri</title>
+    <link rel="stylesheet" href="/styles.css?v=2" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Navigasi utama">
+        <a class="brand" href="#page-beranda" aria-label="PublicSpeak Coach, beranda">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <rect width="40" height="40" rx="14" fill="currentColor" />
+              <path d="M11 21.5 16.5 27 29 13" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="28" cy="28" r="4" fill="#FFC56F" />
+            </svg>
+          </span>
+          <span class="brand-name">publicspeak<span>coach</span></span>
+        </a>
+
+        <p class="nav-caption">MENU</p>
+        <nav class="nav-list">
+          <button class="nav-item active" data-page="beranda">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="2" /><rect x="13" y="3" width="8" height="5" rx="2" /><rect x="13" y="10" width="8" height="11" rx="2" /><rect x="3" y="13" width="8" height="8" rx="2" /></svg>
+            Beranda
+          </button>
+          <button class="nav-item" data-page="latihan">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="m10 8 6 4-6 4V8Z" /></svg>
+            Latihan baru
+          </button>
+          <button class="nav-item" data-page="laporan">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5m0 14h16" /><path d="m7 15 4-4 3 2 5-6" /></svg>
+            Laporan saya
+          </button>
+        </nav>
+
+        <div class="profile">
+          <div class="avatar">◎</div>
+          <div class="profile-copy"><strong>Mode lokal</strong><span>Tanpa akun</span></div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div class="breadcrumb"><span>Ruang latihan</span><span class="breadcrumb-dot">/</span><strong id="page-label">Beranda</strong></div>
+          <div class="topbar-right">
+            <button class="backend-indicator" id="backend-indicator" type="button" aria-live="polite"><span class="backend-dot"></span><span id="backend-label">Memeriksa analisis lokal…</span></button>
+          </div>
+        </header>
+
+        <section class="page active home-page" id="page-beranda" aria-labelledby="welcome-title">
+          <div class="landing-panel">
+            <div class="landing-copy">
+              <p class="landing-kicker"><span class="landing-kicker-mark">PS</span> CAMERA PRACTICE CLUB</p>
+              <h1 id="welcome-title">Kamera on.<br /><span>Grogi? Gas!</span><br />Kamu bisa.</h1>
+              <p class="landing-description">Latihan presentasi pakai kamera. Cek kontak mata, postur, dan gestur sambil bicara.</p>
+              <button class="button landing-cta" data-page="latihan" type="button">
+                Siapkan latihan kamera <span aria-hidden="true">↗</span>
+              </button>
+              <div class="landing-trust"><span class="landing-trust-icon">◎</span><span><strong>Kamera milikmu, ruangmu.</strong><br />Video diproses lokal, tidak disimpan.</span></div>
+            </div>
+            <div class="landing-art-wrap">
+              <span class="landing-doodle landing-doodle-one" aria-hidden="true">✳</span>
+              <span class="landing-doodle landing-doodle-two" aria-hidden="true">✦</span>
+              <div class="landing-art">
+                <img src="/assets/hero-stage.svg" alt="Ilustrasi latihan presentasi di depan kamera dengan analisis gerak langsung" />
+                <div class="landing-live-tag"><i></i> CAMERA READY</div>
+                <div class="landing-meter landing-meter-gaze"><span>◉</span> EYE CONTACT</div>
+                <div class="landing-meter landing-meter-gesture"><span>↗</span> BIG GESTURES</div>
+              </div>
+              <div class="landing-caption"><span>01 / 03</span><strong>Show up. Speak out.</strong><span>✳</span></div>
+            </div>
+            <div class="landing-bottom"><span>YOUR CAMERA IS YOUR PRACTICE ROOM</span><span>Tanpa penonton. Tanpa tekanan. Mulai kapan saja <b>→</b></span></div>
+          </div>
+        </section>
+
+        <section class="page" id="page-latihan" aria-labelledby="practice-title">
+          <div class="page-intro">
+            <p class="eyebrow"><span class="eyebrow-dot"></span> PERSIAPAN PRESENTASI</p>
+            <h1 id="practice-title">Siapkan latihanmu <span class="wave">✦</span></h1>
+            <p class="welcome-copy">Atur topik dan durasi latihan.</p>
+          </div>
+          <div class="practice-layout">
+            <form class="panel setup-panel" id="setup-form">
+              <div class="panel-heading"><div><p class="eyebrow">PERSIAPAN</p><h2>Atur latihan</h2></div></div>
+              <p class="setup-illustration"><img src="/assets/feature-gesture.svg" alt="" /><span>Pilih topik, atur catatan, lalu mulai.</span></p>
+              <label class="field-label" for="topic">Topik presentasi <span>*</span></label>
+              <input id="topic" name="topic" maxlength="80" placeholder="Contoh: Menjaga bumi" aria-describedby="topic-error" aria-invalid="false" />
+              <div class="validation-message hidden" id="topic-error" role="alert"><span aria-hidden="true">!</span><span>Tulis topik presentasimu untuk melanjutkan.</span></div>
+              <div class="topic-suggestions" aria-label="Contoh topik">
+                <span>COBA TOPIK</span>
+                <button type="button" data-topic="Lingkungan bersih">Lingkungan</button>
+                <button type="button" data-topic="Hobi favoritku">Hobi</button>
+                <button type="button" data-topic="Teknologi masa depan">Teknologi</button>
+              </div>
+              <div class="field-row"><label class="field-label" for="duration">Durasi latihan</label><div class="select-wrap"><select id="duration" name="duration"><option value="1">1 menit · pemanasan</option><option value="3" selected>3 menit · latihan singkat</option><option value="5">5 menit · latihan fokus</option></select><span>⌄</span></div></div>
+              <label class="field-label" for="notes">Catatan atau poin penting <span class="optional">(opsional)</span></label>
+              <textarea id="notes" name="notes" rows="5" maxlength="500" placeholder="Tuliskan ide utama atau poin yang ingin kamu ingat..."></textarea>
+              <div class="form-bottom"><span class="privacy-note"><span aria-hidden="true">♧</span> Catatan hanya dipakai di sesi ini.</span><button class="button button-primary" type="submit">Lanjut ke kamera <span aria-hidden="true">→</span></button></div>
+            </form>
+            <aside class="practice-aside">
+              <div class="privacy-card"><img src="/assets/hero-stage.svg" alt="" /><span class="privacy-icon" aria-hidden="true">◎</span><strong>Ruang aman untuk latihan</strong><span>Video hanya dianalisis lewat server lokalmu. Tidak disimpan atau diunggah.</span></div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="page camera-page" id="page-kamera" aria-labelledby="session-topic">
+          <header class="camera-topbar">
+            <button class="camera-back" id="camera-back" aria-label="Kembali ke persiapan">←</button>
+            <div class="camera-title"><h1 id="session-topic">Latihan presentasi</h1><span id="timer-status" role="status" aria-live="polite">Siap mulai</span></div>
+            <div class="camera-clock"><span class="eyebrow">WAKTU</span><strong id="timer">03:00</strong></div>
+          </header>
+          <div class="camera-workspace">
+            <div class="camera-main-column">
+              <div class="video-stage" id="video-stage">
+                <video id="camera-video" autoplay muted playsinline class="hidden"></video>
+                <canvas id="tracking-canvas" class="tracking-canvas hidden" aria-hidden="true"></canvas>
+                <div class="video-placeholder" id="video-placeholder"><span class="placeholder-camera">◎</span><strong>Kamera siap?</strong><span>Aktifkan kamera untuk melihat pratinjau dan analisis langsung.</span></div>
+                <div class="video-badge" id="analysis-badge"><span></span> KAMERA MATI</div>
+                <div class="camera-stage-help">Posisikan wajah dan bahu di tengah bingkai</div>
+                <div class="camera-actions"><button class="button button-light" id="camera-toggle">Aktifkan kamera</button></div>
+              </div>
+              <div class="camera-controls">
+                <span class="camera-privacy"><i></i> Video tidak disimpan</span>
+                <button class="button button-primary button-wide" id="record-toggle"><span class="record-dot"></span> Mulai latihan</button>
+                <button class="button button-outline button-wide hidden" id="finish-session">Selesai latihan <span aria-hidden="true">→</span></button>
+              </div>
+            </div>
+            <aside class="camera-side-panel">
+              <section class="analysis-strip">
+                <div class="analysis-strip-heading"><div><span class="eyebrow">ANALISIS LANGSUNG</span><strong id="analysis-status" role="status" aria-live="polite">Aktifkan kamera untuk mulai</strong></div><span class="analysis-live-dot" id="analysis-live-dot"></span></div>
+                <div class="live-metrics">
+                  <article class="live-metric"><span class="live-icon">◎</span><span class="live-label">Kontak mata</span><strong id="live-gaze">—</strong><div class="live-track"><i id="gaze-bar"></i></div><small id="gaze-state">Menunggu kamera</small></article>
+                  <article class="live-metric"><span class="live-icon">↟</span><span class="live-label">Postur</span><strong id="live-posture">—</strong><div class="live-track"><i id="posture-bar"></i></div><small id="posture-state">Menunggu kamera</small></article>
+                  <article class="live-metric"><span class="live-icon">✳</span><span class="live-label">Gestur</span><strong id="live-gesture">—</strong><div class="live-track"><i id="gesture-bar"></i></div><small id="gesture-state">Menunggu kamera</small></article>
+                  <article class="live-metric"><span class="live-icon">☺</span><span class="live-label">Senyum</span><strong id="live-expression">—</strong><div class="live-track"><i id="expression-bar"></i></div><small id="expression-state">Menunggu kamera</small></article>
+                </div>
+              </section>
+              <section class="teleprompter">
+                <div class="teleprompter-heading"><div><span class="eyebrow">CATATAN BICARA</span><strong>Teleprompter</strong></div><div class="teleprompter-actions"><button id="teleprompter-toggle" aria-expanded="true">Sembunyikan</button><div class="font-controls"><button id="font-smaller" aria-label="Kecilkan teks">A−</button><button id="font-larger" aria-label="Besarkan teks">A+</button></div></div></div>
+                <div class="teleprompter-content" id="session-notes">Catatan presentasimu muncul di sini.</div>
+                <span class="teleprompter-hint">Gulir catatan secara terpisah</span>
+              </section>
+            </aside>
+          </div>
+        </section>
+
+        <section class="page" id="page-laporan" aria-labelledby="report-title">
+          <div class="page-intro">
+            <p class="eyebrow"><span class="eyebrow-dot"></span> REFLEKSI & PROGRES</p>
+            <h1 id="report-title">Laporan latihanmu <span class="wave">✦</span></h1>
+            <p class="welcome-copy">Ringkasan sesi dan metrik kamera.</p>
+          </div>
+          <div class="report-actions"><button class="button button-outline" id="export-sessions">Ekspor sesi <span aria-hidden="true">↓</span></button></div>
+          <div class="report-banner" id="report-banner"><span class="report-banner-icon">✧</span><div><strong id="report-status-title">Belum ada analisis kamera</strong><span id="report-status-copy">Mulai latihan dengan kamera untuk melihat metrik terukur.</span></div><span class="demo-tag" id="report-status-tag">PRIVAT</span></div>
+          <div class="report-summary panel">
+            <div class="report-score"><span class="eyebrow">SKOR LATIHAN</span><strong id="report-score">—</strong><span class="score-caption" id="report-score-caption">Belum ada sesi</span></div>
+            <div class="report-summary-copy"><span class="eyebrow">SESI TERAKHIR</span><h2 id="report-topic">Belum ada latihan</h2><p id="report-date">Mulai latihan pertamamu</p><div class="score-track"><i id="report-progress" style="width:0%"></i></div><span class="score-caption" id="report-summary-caption">Skor muncul setelah analisis kamera.</span></div>
+            <div class="report-flower" aria-hidden="true">✿</div>
+          </div>
+          <div class="section-heading report-heading"><div><p class="eyebrow">RINGKASAN KETERAMPILAN</p><h2>Area yang bisa kamu latih</h2></div></div>
+          <div class="skills-grid">
+            <button class="skill-card" type="button" data-feature="gaze"><span class="skill-icon skill-eye">◉</span><span class="skill-name">Kontak mata</span><strong id="report-gaze">—</strong><span class="skill-track"><i id="report-gaze-bar" style="width:0%"></i></span><span class="skill-description">Perkiraan arah pandangan ke kamera.</span></button>
+            <button class="skill-card" type="button" data-feature="posture"><span class="skill-icon skill-posture">↟</span><span class="skill-name">Postur tubuh</span><strong id="report-posture">—</strong><span class="skill-track"><i id="report-posture-bar" style="width:0%"></i></span><span class="skill-description">Keseimbangan bahu dan posisi tubuh.</span></button>
+            <button class="skill-card" type="button" data-feature="gesture"><span class="skill-icon skill-gesture">✳</span><span class="skill-name">Gestur tangan</span><strong id="report-gesture">—</strong><span class="skill-track"><i id="report-gesture-bar" style="width:0%"></i></span><span class="skill-description">Gerakan tangan yang terdeteksi kamera.</span></button>
+            <button class="skill-card" type="button" data-feature="expression"><span class="skill-icon skill-expression">☺</span><span class="skill-name">Senyum</span><strong id="report-expression">—</strong><span class="skill-track"><i id="report-expression-bar" style="width:0%"></i></span><span class="skill-description">Indikator senyum dari ekspresi wajah.</span></button>
+          </div>
+          <div class="bottom-grid report-bottom">
+            <section class="panel feedback-panel">            <div class="tip-heading"><span class="bulb">✦</span><span class="eyebrow">CATATAN LATIHAN</span></div><h2 id="feedback-title">Siap untuk latihan pertama?</h2><p id="feedback-copy">Metrik kamera adalah panduan sederhana, bukan penilaian kemampuan atau emosi.</p><span class="feedback-sticker" aria-hidden="true">🌟</span></section>
+            <section class="panel next-panel"><p class="eyebrow">LANGKAH KECIL BERIKUTNYA</p><h2>Coba latihan sekali lagi?</h2><p>Ulangi bagian yang terasa menantang. Kamu pasti melihat progresnya.</p><button class="button button-primary" data-page="latihan">Latihan lagi <span aria-hidden="true">→</span></button></section>
+          </div>
+        </section>
+      </main>
+    </div>
+    <dialog class="feature-dialog" id="feature-dialog" aria-labelledby="feature-dialog-title">
+      <button class="dialog-close" id="feature-dialog-close" type="button" aria-label="Tutup">×</button>
+      <img class="dialog-art" id="feature-dialog-art" src="/assets/feature-eye.svg" alt="" />
+      <span class="feature-card-label" id="feature-dialog-kicker"></span>
+      <h2 id="feature-dialog-title"></h2>
+      <p id="feature-dialog-copy"></p>
+      <button class="button button-primary dialog-cta" id="feature-dialog-cta" type="button">Coba saat latihan <span aria-hidden="true">→</span></button>
+    </dialog>
+    <dialog class="feature-dialog abandon-dialog" id="abandon-dialog" aria-labelledby="abandon-title" aria-describedby="abandon-copy">
+      <span class="feature-card-label">SESI AKTIF</span>
+      <h2 id="abandon-title">Latihan belum selesai</h2>
+      <p id="abandon-copy">Jika kembali sekarang, waktu dan hasil latihan ini tidak akan tersimpan.</p>
+      <div class="confirmation-actions">
+        <button class="button button-outline" id="keep-session" type="button">Lanjut latihan</button>
+        <button class="button button-primary" id="discard-session" type="button">Akhiri tanpa menyimpan</button>
+      </div>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="/app.js?v=2"></script>
+  </body>
+</html>
